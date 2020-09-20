@@ -188,6 +188,10 @@ img {
   color: var(--basic-transparent-white);
 }
 
+.full-cart {
+  background-color: var(--basic-red);
+}
+
 .checkout-link {
   background-color: var(--basic-green);
 }
@@ -233,6 +237,42 @@ img {
 }
 
 .login-link:active {
+  color: var(--basic-gray-light);
+}
+
+.user-links {
+  width: 299px;
+}
+
+.profile {
+  background-color: var(--basic-white);
+  height: 45px;
+}
+
+.profile p {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.logout {
+  color: var(--basic-black);
+}
+
+.logout:active {
+  color: var(--basic-gray-light);
+}
+
+.personal-area {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-blue);
+}
+
+.personal-area:hover {
+  color: var(--basic-red);
+}
+
+.personal-area:active {
   color: var(--basic-gray-light);
 }
 
@@ -559,4 +599,68 @@ img {
 .feedback-link:active {
   color: var(--basic-red);
   text-decoration: none;
+}
+
+/* Catalog page */
+.catalog-title {
+  background-color: var(--basic-light);
+  height: 89px;
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-blue);
+}
+
+.pagination,
+.breadcrumbs {
+  list-style: none;
+}
+
+.pagination a {
+  line-height: 18px;
+  color: var(--basic-black);
+  width: 38px;
+  height: 38px;
+  border-radius: 2px;
+  border: 1px solid var(--basic-extra-gray);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.pagination .next-page {
+  width: 140px;
+  text-transform: uppercase;
+}
+
+.pagination .current-page {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+}
+
+.pagination a:hover {
+  border-color: var(--basic-gray-light);
+}
+
+.pagination a:active {
+  border-color: var(--basic-red);
+}
+
+.page-main .catalog-desc {
+  background-color: var(--basic-light);
+  width: auto;
+}
+
+.breadcrumbs a,
+.breadcrumbs .current-page {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
 }
