@@ -143,6 +143,22 @@ img {
   align-content: start;
 }
 
+.page-catalog {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-content: start;
+  column-gap: 20px;
+}
+
+.page-catalog .catalog-title {
+  grid-column: 1 / -1;
+}
+
+.page-catalog .breadcrumbs {
+  grid-column: 1 / -1;
+  margin-bottom: 40px;
+}
+
 /* Common */
 .container {
   width: 940px;
