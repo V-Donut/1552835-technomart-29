@@ -131,9 +131,22 @@ img {
   height: auto;
 }
 
-.wrapper,
-.page-main section {
+/* Grid */
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+/* Common */
+.container {
   width: 940px;
+  margin: 0 auto;
 }
 
 .page-main h2 {
@@ -142,6 +155,23 @@ img {
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
+}
+
+.site-navigation,
+.promo-list,
+.slider-list,
+.catalog-list,
+.brands-list,
+.services-list,
+.services-slider,
+.partners-list,
+.footer-navigation,
+.footer-social,
+.pagination,
+.breadcrumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Header */
@@ -155,7 +185,6 @@ img {
 }
 
 .site-navigation {
-  list-style: none;
   background-color: var(--basic-blue);
 }
 
@@ -202,6 +231,12 @@ img {
 
 .checkout-link:active {
   color: var(--basic-transparent-white);
+}
+
+.columns-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
 }
 
 .slogan {
@@ -281,16 +316,12 @@ img {
   font-family: 'Cuprum', Arial, sans-serif;
 }
 
-.promo-list,
-.slider-list,
-.catalog-list,
-.brands-list,
-.services-list,
-.services-slider,
-.partners-list,
-.footer-navigation,
-.footer-social {
-  list-style: none;
+.promo-list {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 123px 123px 123px;
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
 .promo-item h3 {
@@ -317,6 +348,14 @@ img {
 
 .delivery {
   background-color: var(--special-yellow);
+}
+
+.promo-slider {
+  width: 620px;
+  height: 266px;
+  background-color: var(--basic-gray-light);
+  grid-column: span 2;
+  grid-row-start: span 2;
 }
 
 .button {
@@ -361,8 +400,13 @@ img {
   background-color: var(--basic-gray-medium);
 }
 
-.slider {
-  background-color: var(--basic-gray-light);
+.slider-item {
+  position: relative;
+  display: none;
+}
+
+.slider-item.active {
+  display: block;
 }
 
 .slider-item h3 {
@@ -370,17 +414,36 @@ img {
   font-size: 36px;
   line-height: 36px;
   color: var(--basic-white);
+  position: absolute;
+  margin: 0;
+  top: 23px;
 }
 
 .slider-item p {
   color: var(--basic-white);
   font-size: 18px;
   line-height: 24px;
+  position: absolute;
+  margin: 0;
+  top: 64px;
+}
+
+.slider-item .button {
+  position: absolute;
+  bottom: 27px;
 }
 
 /* Popular items */
 .headline {
   background-color: var(--basic-gray);
+  margin-bottom: 20px;
+}
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
 .catalog-item {
@@ -452,11 +515,20 @@ img {
 }
 
 /* Popular brands */
+.brands-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
 .brands-item {
   width: 220px;
   height: 145px;
   border: 1px solid var(--basic-light-gray);
   background-color: var(--basic-white);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .brands-item:hover {
@@ -471,9 +543,14 @@ img {
 }
 
 /* Services */
-.page-main .services {
+.services {
   background-color: var(--basic-light);
-  width: auto;
+}
+
+.services-columns {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
 }
 
 .services-item {
@@ -501,11 +578,20 @@ img {
   background-color: var(--basic-light-blue);
 }
 
+.services-slide {
+  display: none;
+}
+
+.services-slide.active {
+  display: block;
+}
+
 .services-slide h3 {
   font-family: 'Cuprum', Arial, sans-serif;
   color: var(--basic-blue);
   font-size: 30px;
   line-height: 30px;
+  margin: 0;
 }
 
 .button-credit {
@@ -526,8 +612,17 @@ img {
 }
 
 /* Contacts */
+.contacts {
+  padding-left: 170px;
+}
+
 .button-contacts {
   width: 300px;
+}
+
+.double-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* Footer */
@@ -573,6 +668,10 @@ img {
   color: var(--basic-white);
 }
 
+.footer-social {
+  justify-self: center;
+}
+
 .social-button {
   background-color: var(--basic-extra-blue);
 }
@@ -609,11 +708,6 @@ img {
   font-size: 30px;
   line-height: 30px;
   color: var(--basic-blue);
-}
-
-.pagination,
-.breadcrumbs {
-  list-style: none;
 }
 
 .pagination a {
