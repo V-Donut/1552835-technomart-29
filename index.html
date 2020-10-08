@@ -39,7 +39,13 @@
               <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
             <div class="user-links">
-              <a class="login-link" href="">Войти</a>
+              <a class="login-link" href="">
+                <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z" fill="#C5C5C5"/>
+                  <path d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z" fill="#C5C5C5"/>
+                </svg>
+                <span>Войти</span>
+              </a>
               <a class="login-link" href="">Регистрация</a>
             </div>
           </div>  
@@ -63,7 +69,7 @@
         <section class="promo">
           <h2 class="visually-hidden">Промо-блок</h2>
           <ul class="promo-list">
-            <li class="promo-item materials">
+            <li class="promo-item materials label-new">
               <h3>Материалы</h3>
               <a class="button button-promo" href="">На любой вкус</a>
             </li>
@@ -128,7 +134,7 @@
               </p>
             </li>
             <li class="catalog-item">
-              <div class="catalog-item-label">
+              <div class="catalog-item-label label-new">
                 <a href="">
                   <h3 class="catalog-item-title">Перфоратор BOSCH BFG 3000</h3>
                 </a>
@@ -160,11 +166,11 @@
               </div>
               <p class="catalog-item-prices">
                 <span class="catalog-item-price regular-price">30500 Р.</span>
-                <span class="catalog-item-price discounted-price">25500 Р</span>.
+                <span class="catalog-item-price discounted-price">25500 Р.</span>
               </p>
             </li>
             <li class="catalog-item">
-              <div class="catalog-item-label">
+              <div class="catalog-item-label label-new">
                 <a href="">
                   <h3 class="catalog-item-title">Перфоратор BOSCH BFG 2000</h3>
                 </a>
@@ -246,14 +252,14 @@
               <li class="services-item">Кредит</li>
             </ul>
             <ul class="services-slider">
-              <li class="services-slide active">
+              <li class="services-slide services-slide-delivery active">
                 <h3>Доставка</h3>
                 <p>Мы с удовольствием доставим ваш товар прямо<br>
                   к вашему подъезду совершенно бесплатно!<br>
                   Ведь мы неплохо заработаем,<br>
                   поднимая его на ваш этаж!</p>
               </li>
-              <li class="services-slide">
+              <li class="services-slide services-slide-guarantee">
                 <h3>Гарантия</h3>
                 <p>Если купленный у нас товар поломается или заискрит,<br>
                   а также в случае пожара, спровоцированного его<br>
@@ -261,7 +267,7 @@
                   гарантии. Мы обменяем сгоревший товар на новый.<br>
                   Дом уж восстановите как-нибудь сами.</p>
               </li>
-              <li class="services-slide">
+              <li class="services-slide services-slide-credit">
                 <h3>Кредит</h3>
                 <p>Залезть в долговую яму стало проще!<br>
                   Кредитные консультанты придут вам на помощь.</p>
@@ -330,13 +336,28 @@
               Все права защищены</p>
             <ul class="footer-social">
               <li>
-                <a class="social-button" href="#"><span>Вконтакте</span></a>
+                <a class="social-button" href="#">
+                  <span class="visually-hidden">Вконтакте</span>
+                  <svg width="27" height="16" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.138 12.51C17.094 12.201 18.318 14.55 19.621 15.449C20.599 16.13 21.348 15.983 21.348 15.983L24.821 15.933C24.821 15.933 26.636 15.821 25.778 14.379C25.707 14.259 25.275 13.31 23.193 11.357C21.016 9.31398 21.311 9.64498 23.932 6.11298C25.529 3.95998 26.168 2.64498 25.968 2.08498C25.776 1.54598 24.603 1.68598 24.603 1.68598L20.69 1.71298C20.309 1.71398 19.986 1.83198 19.839 2.22798C19.836 2.23198 19.218 3.89398 18.394 5.30698C16.653 8.29598 15.958 8.45498 15.67 8.26798C15.009 7.83498 15.176 6.53098 15.176 5.60398C15.176 2.70698 15.608 1.49898 14.33 1.18698C13.903 1.08298 13.591 1.01498 12.502 1.00498C11.11 0.983976 9.928 1.00498 9.258 1.33398C8.813 1.55698 8.472 2.04598 8.679 2.07398C8.939 2.10898 9.522 2.23398 9.834 2.65998C10.235 3.21198 10.223 4.44898 10.223 4.44898C10.223 4.44898 10.452 7.85998 9.683 8.28298C9.155 8.57298 8.433 7.98098 6.88 5.26698C6.087 3.87898 5.488 2.34498 5.488 2.34498C5.488 2.34498 5.372 2.05998 5.162 1.90398C4.912 1.71898 4.562 1.65998 4.562 1.65998L0.848 1.68398C0.848 1.68398 0.29 1.69998 0.0850002 1.94598C-0.0969998 2.16398 0.0700002 2.61398 0.0700002 2.61398C0.0700002 2.61398 2.979 9.49498 6.273 12.961C9.293 16.143 12.725 15.932 12.725 15.932H14.28C14.28 15.932 14.749 15.878 14.989 15.62C15.213 15.38 15.203 14.929 15.203 14.929C15.203 14.929 15.172 12.82 16.138 12.51Z" fill="white"/>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a class="social-button" href="#"><span>Фейсбук</span></a>
+                <a class="social-button" href="#">
+                  <span class="visually-hidden">Фейсбук</span>
+                  <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a class="social-button" href="#"><span>Инстаграм</span></a>
+                <a class="social-button" href="#">
+                  <span class="visually-hidden">Инстаграм</span>
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z" fill="white"/>
+                  </svg>
+                </a>
               </li>
             </ul>
             <div class="footer-feedbacks">
@@ -353,6 +374,18 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal write-us">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <!-- Здесь будет форма обратной связи -->
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
+    
+    <section class="modal map-popup">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <!-- Здесь будет карта -->
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
 
   </body>
 </html>
