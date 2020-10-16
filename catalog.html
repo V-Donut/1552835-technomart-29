@@ -15,14 +15,27 @@
           <div class="container">
             <div class="main-navigation">
               <div class="header-logo">
-                <a>
+                <a href="index.html">
                   <img src="img/logo.svg" width="220" height="47" alt="Логотип интернет-магазина «Техномарт»">
                 </a>
               </div>
-              <!-- Здесь будет форма поиска -->
+              <div class="header-search">
+                <form action="https://echo.htmlacademy.ru" method="post">
+                  <label class="search-loupe" for="search">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="#FFFFFF"/>
+                    </svg>
+                  </label>
+                  <input class="search-string" id="search" type="text" name="search" placeholder="Поиск:">
+                </form>
+              </div>
               <div class="header-links">
-                <a class="header-link bookmarks-link" href="">Закладки: 0</a>
-                <a class="header-link cart-link full-cart" href="">Корзина: 10</a>
+                <a class="header-link bookmarks-link" href="">
+                  <span>Закладки:</span> 0
+                </a>
+                <a class="header-link cart-link full-cart" href="">
+                  <span>Корзина:</span> 10
+                </a>
                 <a class="header-link checkout-link" href="">Оформить заказ</a>
               </div>
             </div>
@@ -88,14 +101,93 @@
         <section class="filter-items">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <div class="filter-title">Фильтр:</div>
-          <!-- Здесь будет форма фильтра -->
+
+          <form class="filter" method="get" action="https://echo.htmlacademy.ru" target="_blank">
+            <fieldset>
+              <legend>Цена:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="width: 73%; margin-left: 8%;"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0" style="left: 8%"></div>
+                  <div class="toggle toggle-max" tabindex="0" style="left: 73%"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    <input type="number" name="min-price" min="0" value="0">
+                  </label>
+                  <span class="price-separator">—</span>
+                  <label class="max-price">
+                    <input type="number" name="max-price" min="0" value="30000">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Производители:</legend>
+              <ul class="producers">
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch" id="filter-bosch" checked>
+                  <label for="filter-bosch">Bosch</label>
+                </li>
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interskol" id="filter-interskol">
+                  <label for="filter-interskol">Интерскол</label>
+                </li>
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="makita" id="filter-makita" checked>
+                  <label for="filter-makita">Makita</label>
+                </li>
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="dewalt" id="filter-dewalt">
+                  <label for="filter-dewalt">Dewalt</label>
+                </li>
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hitachi" id="filter-hitachi">
+                  <label for="filter-hitachi">Hitachi</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset>
+              <legend>Питание:</legend>
+              <ul class="power">
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power" value="accumulator" id="filter-accumulator" checked>
+                  <label for="filter-accumulator">Аккумуляторные</label>
+                </li>
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power" value="socket" id="filter-socket">
+                  <label for="filter-socket">Сетевые</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <button class="button button-filter" type="submit">Показать</button>
+          </form>
         </section>
 
         <div class="catalog-wrapper">
           <section class="sorting-items">
             <h2 class="visually-hidden">Сортировка товаров</h2>
-            <div class="filter-title">Сортировка:</div>
-            <!-- Здесь будет форма сортировки -->
+            <div class="sorting-title">Сортировка:</div>
+            
+            <div class="sorting-links">
+              <a class="sorting-link active" href="">По цене</a>
+              <a class="sorting-link" href="">По типу</a>
+              <a class="sorting-link" href="">По функционалу</a>
+            </div>
+
+            <div class="sorting-directions">
+              <a class="sorting-asc active" href="" title="По возрастанию">
+                <span class="visually-hidden">По возрастанию</span>
+              </a>
+              <a class="sorting-desc" href="" title="По убыванию">
+                <span class="visually-hidden">По убыванию</span>
+              </a>
+            </div>
           </section>
 
           <section class="catolog-items">
