@@ -292,6 +292,7 @@ img {
   line-height: 24px;
   padding: 17px 28px 19px 28.5px;
   display: block;
+  outline-offset: -2px;
 }
 
 .site-navigation li:first-child {
@@ -317,6 +318,7 @@ img {
   padding: 10px 0 8px;
   display: block;
   text-align: center;
+  outline-offset: -2px;
 }
 
 .bookmarks-link:active {
@@ -666,7 +668,6 @@ img {
   background-color: var(--basic-red);
   color: var(--basic-white);
   text-transform: uppercase;
-  cursor: pointer;
   border: 0;
 }
 
@@ -690,39 +691,6 @@ img {
 
 .button-promo:active {
   background-color: var(--basic-gray-medium);
-}
-
-.slider-list {
-  position: relative;
-}
-
-.slider-list::before {
-  content: "";
-  position: absolute;
-  top: 122px;
-  left: 24px;
-  width: 23px;
-  height: 40px;
-  background-image: url("../img/icon-left.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.slider-list::after {
-  content: "";
-  position: absolute;
-  top: 122px;
-  right: 20px;
-  width: 23px;
-  height: 40px;
-  background-image: url("../img/icon-left.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  transform: rotate(180deg);
-  z-index: 1;
-  cursor: pointer;
 }
 
 .slider-item {
@@ -760,6 +728,28 @@ img {
   position: absolute;
   bottom: 34px;
   left: 24px;
+  z-index: 1;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 122px;
+  width: 21px;
+  height: 39px;
+  background-image: url("../img/icon-left.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.slider-arrow-prev {
+  left: 24px;
+}
+
+.slider-arrow-next {
+  right: 20px;
+  transform: rotate(180deg);
 }
 
 .pagination-bullets {
@@ -769,28 +759,31 @@ img {
   text-align: center;
   padding: 0;
   position: absolute;
-  bottom: 21px;
+  bottom: 30px;
   padding-left: 4px;
 }
 
-.pagination-bullets .active {
+.pagination-bullet.active button {
   background-color: var(--basic-white);
 }
 
 .pagination-bullets li {
   display: inline-block;
+  margin-right: 7px;
+}
+
+.pagination-bullets li:last-child {
+  margin-right: 0;
+}
+
+.pagination-bullets button {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: var(--basic-red);
   border: 2px solid var(--basic-white);
-  margin-right: 7px;
   box-sizing: border-box;
-}
-
-.pagination-bullets button {
-  background-color: transparent;
-  border: 0;
+  padding: 0;
 }
 
 /* Popular items */
@@ -837,7 +830,7 @@ img {
   font-size: 18px;
   line-height: 20px;
   color: var(--basic-black);
-  margin: 10px 0 0;
+  margin: 10px 0 7px;
   padding: 0 17px 0 18px;
 }
 
@@ -847,6 +840,10 @@ img {
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.catalog-item-label a {
+  outline-offset: -1px;
 }
 
 .label-new::before {
@@ -878,7 +875,8 @@ img {
   box-shadow: 0 4px 15px 0 var(--basic-black-shadow);
 }
 
-.catalog-item:hover img {
+.catalog-item:hover img,
+.catalog-item:focus-within img {
   display: none;
 }
 
@@ -886,14 +884,19 @@ img {
   display: none;
 }
 
-.catalog-item:hover .catalog-item-buttons {
+.catalog-item:hover .catalog-item-buttons,
+.catalog-item:focus-within .catalog-item-buttons {
   display: block;
 }
 
 .catalog-item-prices {
   display: flex;
   flex-direction: column;
-  margin: 7px 0 0;
+  margin: 0;
+}
+
+.catalog-item-buttons:focus-within {
+  display: block;
 }
 
 .button-cart {
@@ -903,6 +906,21 @@ img {
   border: 0;
   margin-bottom: 10px;
   width: 135px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.button-cart::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/icon-cart.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
 }
 
 .button-cart:hover {
@@ -931,11 +949,6 @@ img {
   background-color: var(--basic-white);
   filter: drop-shadow(0 4px 4px var(--basic-black-transparent));
   opacity: .5;
-}
-
-.button-bookmarks:focus,
-.button-cart:focus {
-  outline: none;
 }
 
 .catalog-item-price {
@@ -1180,11 +1193,12 @@ img {
 }
 
 .contacts-map {
-  margin: 32px 0 18px;
+  margin: 32px 0 0;
 }
 
 .button-contacts {
   width: 300px;
+  margin-top: 18px;
 }
 
 .double-columns {
