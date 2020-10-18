@@ -1087,16 +1087,18 @@ img {
   line-height: 30px;
   background-color: var(--basic-blue);
   color: var(--basic-white);
-  width: 218px;
+  width: 240px;
   padding: 13.5px 0 18.5px 22px;
-  cursor: pointer;
+  border: 0;
+  text-align: left;
 }
 
 .services-item:not(.services-item-active) {
   box-shadow: 0 1px 0 var(--basic-light-blue), inset 0 1px 0 var(--basic-blue-shadow);
 }
 
-.services-item:hover {
+.services-item:hover,
+.services-item:focus {
   background-color: var(--basic-light-blue);
 }
 
@@ -1105,7 +1107,8 @@ img {
   background-color: var(--basic-white);
 }
 
-.services-item-active:hover {
+.services-item-active:hover,
+.services-item-active:focus {
   color: var(--basic-white);
   background-color: var(--basic-light-blue);
 }
