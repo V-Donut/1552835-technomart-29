@@ -227,10 +227,24 @@ img {
 
 .header-logo {
   width: 220px;
+  position: relative;
 }
 
-.header-logo img {
+.logo {
   position: absolute;
+  width: 220px;
+  height: 47px;
+  text-align: center;
+  background-color: var(--basic-red);
+  background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center top 12px;
+  box-shadow: inset 0px -5px 0px var(--basic-black-transparent);
+}
+
+.link-logo:active .logo,
+.link-logo:focus .logo {
+  background-color: var(--basic-dark-red);
 }
 
 .header-search {
@@ -532,20 +546,21 @@ img {
   padding-top: 3px;
 }
 
-.profile:hover path {
-  fill: var(--basic-blue-medium);
-}
-
-.profile:active path {
-  fill: var(--basic-gray-light);
-}
-
 .logout {
   color: var(--basic-black);
 }
 
 .logout:active {
   color: var(--basic-gray-light);
+}
+
+.logout:hover path,
+.logout:focus path {
+  fill: var(--basic-blue-medium);
+}
+
+.logout:active path {
+  fill: var(--basic-gray-light);
 }
 
 .personal {
@@ -557,10 +572,10 @@ img {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-blue);
-  position: relative;
 }
 
-.personal-area:hover {
+.personal-area:hover,
+.personal-area:focus {
   color: var(--basic-red);
 }
 
@@ -568,15 +583,17 @@ img {
   color: var(--basic-gray-light);
 }
 
-.personal-area:first-child {
-  padding-right: 29px;
+.link-separator {
+  position: relative;
+  padding-left: 14px;
+  padding-right: 14.5px;
 }
 
-.personal-area:last-child::before {
+.link-separator::before {
   content: "";
   position: absolute;
-  top: 7px;
-  left: -17px;
+  top: 5.5px;
+  left: 12px;
   width: 4px;
   height: 4px;
   background: linear-gradient(0deg, var(--basic-blue), var(--basic-blue)), var(--basic-white);
@@ -880,7 +897,8 @@ img {
   align-items: center;
 }
 
-.catalog-item:hover {
+.catalog-item:hover,
+.catalog-item:focus-within {
   box-shadow: 0 4px 15px 0 var(--basic-black-shadow);
 }
 
@@ -891,6 +909,8 @@ img {
 
 .catalog-item-buttons {
   display: none;
+  padding-bottom: 8px;
+  padding-right: 3px;
 }
 
 .catalog-item:hover .catalog-item-buttons,
@@ -947,6 +967,7 @@ img {
   background-color: var(--basic-white);
   color: var(--basic-blue);
   width: 135px;
+  padding-top: 2px;
 }
 
 .button-bookmarks:hover,
@@ -1247,6 +1268,23 @@ img {
 
 .footer-contacts {
   min-width: 350px;
+  position: relative;
+}
+
+.footer-logo {
+  display: block;
+  width: 220px;
+  min-height: 68px;
+}
+
+.footer-logo .logo {
+  height: 68px;
+  background-size: 138px;
+  background-position: center top 19px;
+}
+
+.footer-logo:focus .logo {
+  background-color: var(--basic-dark-red);
 }
 
 .footer-address,
@@ -1259,7 +1297,7 @@ img {
 }
 
 .footer-address {
-  margin-top: 14px;
+  margin-top: 22px;
 }
 
 .footer-navigation {
@@ -1411,7 +1449,8 @@ img {
   color: var(--basic-white);
 }
 
-.pagination a:hover {
+.pagination a:hover,
+.pagination a:focus {
   border-color: var(--basic-gray-light);
 }
 
@@ -1421,12 +1460,12 @@ img {
 
 .page-main .catalog-desc {
   background-color: var(--basic-light);
-  padding: 65px 0 69px;
+  padding: 67px 0 69px;
 }
 
 .catalog-desc h2 {
   margin-bottom: 25px;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.65px;
 }
 
 .catalog-desc p {
@@ -1453,20 +1492,24 @@ img {
   position: relative;
 }
 
+.breadcrumbs-home {
+  width: 14px;
+  height: 17px;
+  display: block;
+  position: relative;
+  outline-offset: 2px;
+}
+
 .breadcrumbs-home::before {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 2px;
   left: 0;
   width: 14px;
   height: 13px;
   background-image: url("../img/icon-home.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-}
-
-.breadcrumbs li:first-child {
-  padding-left: 13px;
 }
 
 .breadcrumbs li:not(:first-child)::before {
@@ -1727,7 +1770,7 @@ img {
 }
 
 .sorting-title {
-  width: 176px;
+  width: 185px;
   padding: 10px 0 10px 20px;
 }
 
@@ -1771,12 +1814,14 @@ img {
 
 .sorting-directions {
   display: flex;
+  padding-right: 8.5px;
 }
 
 .sorting-asc,
 .sorting-desc {
   position: relative;
   padding: 14px;
+  outline-offset: -1px;
 }
 
 .sorting-desc {
@@ -1788,7 +1833,7 @@ img {
   content: "";
   position: absolute;
   top: 14px;
-  left: 0;
+  left: 8.5px;
   width: 0;
   height: 0;
   border-left: 5.5px solid transparent;
@@ -1825,6 +1870,7 @@ img {
   background-color: var(--basic-white);
   box-shadow: 0 4px 15px 0 var(--basic-black-shadow);
   box-sizing: border-box;
+  z-index: 100;
 }
 
 .modal-close {
