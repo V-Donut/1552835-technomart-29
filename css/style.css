@@ -368,6 +368,11 @@ img {
   opacity: 0.3;
 }
 
+/* Непустые закладки */
+.has-bookmarks {
+  background-color: var(--basic-red);
+}
+
 .cart-link:active {
   background-color: var(--basic-light-black);
   color: var(--basic-transparent-white);
@@ -400,6 +405,7 @@ img {
   opacity: 0.3;
 }
 
+/* Непустая корзина */
 .full-cart {
   background-color: var(--basic-red);
 }
