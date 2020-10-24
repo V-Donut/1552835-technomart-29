@@ -1,3 +1,7 @@
+const mapLink = document.querySelector("#map-link");
+const mapPopup = document.querySelector(".map-popup");
+const mapClose = mapPopup.querySelector(".modal-close");
+
 const buttonContacts = document.querySelector(".button-contacts");
 const feedbackModal = document.querySelector(".write-us");
 const feedbackClose = feedbackModal.querySelector(".modal-close");
@@ -46,6 +50,11 @@ window.addEventListener("keydown", function (evt) {
       evt.preventDefault();
       feedbackModal.classList.remove("modal-show");
     }
+
+    if (mapPopup.classList.contains("modal-show")) {
+      evt.preventDefault();
+      mapPopup.classList.remove("modal-show");
+    }
   }
 });
 
@@ -74,4 +83,14 @@ feedbackForm.addEventListener("submit", function (evt) {
       localStorage.setItem("feedbackEmail", feedbackEmail.value);
     }
   }
+});
+
+mapLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.classList.add("modal-show");
+});
+
+mapClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.classList.remove("modal-show");
 });

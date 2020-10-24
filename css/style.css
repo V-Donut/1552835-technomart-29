@@ -257,6 +257,7 @@ img {
   top: 12px;
   left: 17px;
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .search-string {
@@ -525,42 +526,42 @@ img {
 .profile {
   background-color: var(--basic-white);
   width: 299px;
-  padding: 11px 0 10px;
-  text-align: center;
   font-size: 21px;
   line-height: 21px;
   display: flex;
-  justify-content: center;
 }
 
-.profile-name {
-  padding-left: 23px;
-  padding-right: 21px;
-}
-
-.profile-icon {
-  padding-top: 2px;
-}
-
-.profile-icon:last-child {
-  padding-top: 3px;
-}
-
-.logout {
+.profile-link {
   color: var(--basic-black);
 }
 
-.logout:active {
+.profile-link:active {
   color: var(--basic-gray-light);
 }
 
-.logout:hover path,
-.logout:focus path {
+.profile-link:hover path,
+.profile-link:focus path {
   fill: var(--basic-blue-medium);
 }
 
-.logout:active path {
+.profile-link:active path {
   fill: var(--basic-gray-light);
+}
+
+.profile-icon {
+  display: flex;
+  padding: 13px 7px 10px 16px;
+  max-width: 226px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.profile-avatar {
+  margin-right: 21px;
+}
+
+.logout-icon {
+  padding: 14px 14px 10px;
 }
 
 .personal {
@@ -691,6 +692,7 @@ img {
   color: var(--basic-white);
   text-transform: uppercase;
   border: 0;
+  cursor: pointer;
 }
 
 .button:hover,
@@ -763,6 +765,7 @@ img {
   background-color: transparent;
   border: 0;
   padding: 0;
+  cursor: pointer;
 }
 
 .slider-arrow-prev {
@@ -810,6 +813,7 @@ img {
   border: 2px solid var(--basic-white);
   box-sizing: border-box;
   padding: 0;
+  cursor: pointer;
 }
 
 /* Popular items */
@@ -1112,6 +1116,7 @@ img {
   padding: 13.5px 0 18.5px 22px;
   border: 0;
   text-align: left;
+  cursor: pointer;
 }
 
 .services-item:not(.services-item-active) {
