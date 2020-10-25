@@ -341,12 +341,12 @@ img {
   color: var(--basic-transparent-white);
 }
 
-.bookmarks-link span {
+.bookmarks-text {
   position: relative;
   padding-left: 20px;
 }
 
-.bookmarks-link span::before {
+.bookmarks-text::before {
   content: "";
   position: absolute;
   top: 2px;
@@ -378,12 +378,12 @@ img {
   color: var(--basic-transparent-white);
 }
 
-.cart-link span {
+.cart-text {
   position: relative;
   padding-left: 23px;
 }
 
-.cart-link span::before {
+.cart-text::before {
   content: "";
   position: absolute;
   top: 2px;
