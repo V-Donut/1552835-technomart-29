@@ -286,7 +286,7 @@ img {
   opacity: 1;
 }
 
-.header-search:focus-within label path {
+.header-search:focus-within path {
   fill: var(--basic-red);
 }
 
