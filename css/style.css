@@ -772,6 +772,7 @@ img {
   border: 0;
   padding: 0;
   cursor: pointer;
+  outline: none;
 }
 
 .slider-arrow-prev {
@@ -798,10 +799,6 @@ img {
   bottom: 30px;
 }
 
-.pagination-bullet.active button {
-  background-color: var(--basic-white);
-}
-
 .pagination-bullets li {
   display: inline-block;
   margin-right: 7px;
@@ -811,15 +808,29 @@ img {
   margin-right: 0;
 }
 
-.pagination-bullets button {
+.pagination-bullet button {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--basic-red);
+  background-color: var(--basic-white);
   border: 2px solid var(--basic-white);
   box-sizing: border-box;
   padding: 0;
   cursor: pointer;
+}
+
+.pagination-bullet button.active {
+  background-color: var(--basic-red);
+}
+
+.pagination-bullet button:hover {
+  background-color: var(--basic-red);
+  border: 2px solid var(--basic-red);
+}
+
+.pagination-bullet button:focus {
+  background-color: var(--basic-red);
+  outline: none;
 }
 
 /* Popular items */
@@ -1125,7 +1136,7 @@ img {
   cursor: pointer;
 }
 
-.services-item:not(.services-item-active) {
+.services-item:not(.active) {
   box-shadow: 0 1px 0 var(--basic-light-blue), inset 0 1px 0 var(--basic-blue-shadow);
 }
 
@@ -1134,15 +1145,19 @@ img {
   background-color: var(--basic-light-blue);
 }
 
-.services-item-active {
+.services-item.active {
   color: var(--basic-blue);
   background-color: var(--basic-white);
 }
 
-.services-item-active:hover,
-.services-item-active:focus {
+.services-item.active:hover {
   color: var(--basic-white);
   background-color: var(--basic-light-blue);
+}
+
+.services-item.active:focus {
+  color: var(--basic-blue);
+  background-color: var(--basic-white);
 }
 
 .services-slide {
