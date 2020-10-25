@@ -801,6 +801,7 @@ img {
 
 .pagination-bullets li {
   display: inline-block;
+  vertical-align: middle;
   margin-right: 7px;
 }
 
@@ -2007,6 +2008,7 @@ img {
 .map-popup {
   width: 943px;
   height: 449px;
+  background-color: var(--basic-extra-gray);
 }
 
 .map-popup .modal-close {
