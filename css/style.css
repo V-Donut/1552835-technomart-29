@@ -1333,15 +1333,18 @@ img {
   justify-content: flex-end;
   margin-top: 20px;
   height: min-content;
-  margin-right: -27px;
 }
 
 .footer-navigation a {
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-light);
-  padding: 17px 29px;
+  padding: 17px 29.5px;
   display: block;
+}
+
+.footer-navigation .last-in-row {
+  padding-right: 0;
 }
 
 .footer-navigation a:hover,
