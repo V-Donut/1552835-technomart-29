@@ -1103,11 +1103,11 @@ img {
 
 .services-columns {
   display: flex;
-  justify-content: space-between;
 }
 
 .services-list {
   position: relative;
+  margin-right: 80px;
 }
 
 .services-list::after {
@@ -1164,10 +1164,12 @@ img {
 .services-slide {
   display: none;
   margin: 0;
-  width: 619px;
-  height: 283px;
+  width: 319px;
+  min-height: 253px;
   background-repeat: no-repeat;
-  background-position: right bottom 2px;
+  background-position: right top 20px;
+  padding-right: 300px;
+  padding-bottom: 30px;
 }
 
 .services-slide p {
